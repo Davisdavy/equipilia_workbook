@@ -50,6 +50,7 @@ dependencies:
   lottie:
   font_awesome:
   flutter_flushbar:
+  syncfusion_flutter_charts: ^20.4.41
 
 dev_dependencies:
   flutter_test:

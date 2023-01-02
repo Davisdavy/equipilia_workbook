@@ -62,6 +62,7 @@ class _CustomNavigationState extends State<CustomNavigation> {
         return false;
       },
       child: Scaffold(
+        backgroundColor: Colors.blueGrey.shade50,
           key: _key,
           body: IndexedStack(
             index: _selectedIndex,
