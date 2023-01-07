@@ -147,89 +147,93 @@ class _CareersTabState extends State<CareersTab> {
                   shrinkWrap: true,
                   physics: const BouncingScrollPhysics(),
                   children: List.generate(18, (index) {
-                    return Padding(
-                      padding: const EdgeInsets.all(0.0),
-                      child: SizedBox(
-                        height: 120.0,
-                        width: size.width,
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.only(left: 10.0, right: 5.0),
-                              child: Container(
-                                height: 100,
-                                width: 80,
-                                decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(10.0),
-                                    image: const DecorationImage(
-                                        image: AssetImage('assets/images/is.jpg'),
-                                        fit: BoxFit.cover
-                                    )
+                    return Column(
+                      children: [
+                        SizedBox(
+                          height: 120.0,
+                          width: size.width,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.only(left: 10.0, right: 5.0),
+                                child: Container(
+                                  height: 100,
+                                  width: 80,
+                                  decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(10.0),
+                                      image: const DecorationImage(
+                                          image: AssetImage('assets/images/is.jpg'),
+                                          fit: BoxFit.cover
+                                      )
+                                  ),
                                 ),
                               ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.symmetric(vertical: 15.0),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                                children:  [
-                                  SizedBox(
-                                    //width: size.width  / 1.8,
-                                    child: const SmallTextWidget(text: 'Software Sales & Support Executive',
-                                      fontWeight: FontWeight.w700,
-                                      size: 16.0,
-                                      align: TextAlign.start,
-                                      textOverflow: TextOverflow.ellipsis,
-                                      color: AppColors.blackThemeColor,),
-                                  ),
-                                 const SizedBox(height: 8.0,),
-                                  SizedBox(
-                                    width: 200,
-                                    child: SmallTextWidget(text: 'Digital Frameworks Ltd',
-                                      fontWeight: FontWeight.w700,
-                                      size: 14.0,
-                                      align: TextAlign.start,
-                                      textOverflow: TextOverflow.ellipsis,
-                                      color: AppColors.fontHeaderColor,),
-                                  ),
-                                  SizedBox(height: 8.0,),
-                                  SizedBox(
-                                    //width: 200,
-                                    child: SmallTextWidget(text: 'Nairobi | Fulltime | Salary: Ksh45,000',
-                                      fontWeight: FontWeight.w700,
-                                      size: 14.0,
-                                      align: TextAlign.start,
-                                      textOverflow: TextOverflow.ellipsis,
-                                      color: AppColors.fontHeaderColor,),
-                                  ),
-                                  SizedBox(height: 15.0,),
-
-                                  Row(
-                                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                                    children: [
-                                      SmallTextWidget(text: '5 months ago',
+                              Padding(
+                                padding: const EdgeInsets.symmetric(vertical: 15.0),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                  children:  [
+                                    SizedBox(
+                                      //width: size.width  / 1.8,
+                                      child: const SmallTextWidget(text: 'Software Sales & Support Executive',
                                         fontWeight: FontWeight.w700,
-                                        size: 10.0,
+                                        size: 16.0,
                                         align: TextAlign.start,
                                         textOverflow: TextOverflow.ellipsis,
                                         color: AppColors.blackThemeColor,),
-                                      const SizedBox(width: 10.0,),
-                                      Icon(Icons.favorite_border, color: AppColors.fontHeaderColor, size: 18.0,),
-                                      const SizedBox(width: 12.0,),
-                                      Image.asset('assets/icons/share.png', height: 19.0,),
-                                      const SizedBox(width: 12.0,),
-                                      SmallTextWidget(text: 'Apply', size: 18.0, fontWeight: FontWeight.w700, color: AppColors.secondaryThemeColor,)
-                                     
-                                    ],
-                                  ),
-                                ],
-                              ),
-                            )
-                          ],
+                                    ),
+                                   const SizedBox(height: 8.0,),
+                                    SizedBox(
+                                      width: 200,
+                                      child: SmallTextWidget(text: 'Digital Frameworks Ltd',
+                                        fontWeight: FontWeight.w700,
+                                        size: 14.0,
+                                        align: TextAlign.start,
+                                        textOverflow: TextOverflow.ellipsis,
+                                        color: AppColors.fontHeaderColor,),
+                                    ),
+                                    SizedBox(height: 8.0,),
+                                    SizedBox(
+                                      //width: 200,
+                                      child: SmallTextWidget(text: 'Nairobi | Fulltime | Salary: Ksh45,000',
+                                        fontWeight: FontWeight.w700,
+                                        size: 14.0,
+                                        align: TextAlign.start,
+                                        textOverflow: TextOverflow.ellipsis,
+                                        color: AppColors.fontHeaderColor,),
+                                    ),
+                                    SizedBox(height: 15.0,),
+
+                                    Row(
+                                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                      children: [
+                                        SmallTextWidget(text: '5 months ago',
+                                          fontWeight: FontWeight.w700,
+                                          size: 10.0,
+                                          align: TextAlign.start,
+                                          textOverflow: TextOverflow.ellipsis,
+                                          color: AppColors.blackThemeColor,),
+                                        const SizedBox(width: 10.0,),
+                                        Icon(Icons.favorite_border, color: AppColors.fontHeaderColor, size: 18.0,),
+                                        const SizedBox(width: 12.0,),
+                                        Image.asset('assets/icons/share.png', height: 19.0,),
+                                        const SizedBox(width: 12.0,),
+                                        SmallTextWidget(text: 'Apply', size: 18.0, fontWeight: FontWeight.w700, color: AppColors.secondaryThemeColor,)
+
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                              )
+                            ],
+                          ),
                         ),
-                      ),
+                         Divider(
+                          color: AppColors.fontHeaderColor.withOpacity(0.4),
+                        )
+                      ],
                     );
                   }),
                 ),
