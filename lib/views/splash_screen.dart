@@ -53,7 +53,7 @@ class _SplashScreenState extends State<SplashScreen> {
                   switch(snapshot.connectionState){
                     case ConnectionState.none:
                     case ConnectionState.waiting:
-                      return Scaffold(
+                      return const Scaffold(
                         extendBodyBehindAppBar: true,
                         backgroundColor: AppColors.primaryThemeColor,
                         // body: Center(
@@ -64,8 +64,8 @@ class _SplashScreenState extends State<SplashScreen> {
                         // ),
                       );
                     default:
-                      if(snapshot.hasError)
-                        return Scaffold(
+                      if(snapshot.hasError) {
+                        return const Scaffold(
                           extendBodyBehindAppBar: true,
                           backgroundColor: AppColors.primaryThemeColor,
                           // body: Center(
@@ -75,40 +75,45 @@ class _SplashScreenState extends State<SplashScreen> {
                           //   ),
                           // ),
                         );
-                      else if(snapshot.data ==  InternetConnectionStatus.disconnected)
+                      } else if(snapshot.data ==  InternetConnectionStatus.disconnected) {
                         return Scaffold(
                           extendBodyBehindAppBar: true,
                           backgroundColor: AppColors.primaryThemeColor,
-                          body: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              // Center(
-                              //   child: Image.asset(
-                              //     "assets/animations/jety.gif",
-                              //     height: 200,
-                              //   ),
-                              // ),
-                              const SmallTextWidget(text: "You seem to be offline", color: AppColors.whiteThemeColor,),
-                              const SizedBox(height: 8.0,),
-                              InkWell(
-                                onTap: (){
-                                  RestartWidget.restartApp(context);
-                                },
-                                child: Container(
-                                  height: 45,
-                                  width: 100,
-                                  decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(5.0),
-                                      color: AppColors.whiteThemeColor
+                          body: Center(
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                // Center(
+                                //   child: Image.asset(
+                                //     "assets/animations/jety.gif",
+                                //     height: 200,
+                                //   ),
+                                // ),
+                                const Center(child: SmallTextWidget(text: "You seem to be offline", color: AppColors.whiteThemeColor,)),
+                                const SizedBox(height: 8.0,),
+                                Center(
+                                  child: InkWell(
+                                    onTap: (){
+                                      RestartWidget.restartApp(context);
+                                    },
+                                    child: Container(
+                                      height: 45,
+                                      width: 100,
+                                      decoration: BoxDecoration(
+                                          borderRadius: BorderRadius.circular(5.0),
+                                          color: AppColors.whiteThemeColor
+                                      ),
+                                      child: const Center(child: Text("Retry", style: TextStyle(color: AppColors.primaryThemeColor, fontSize: 14.0, fontWeight: FontWeight.bold),)),
+                                    ),
                                   ),
-                                  child: const Center(child: Text("Retry", style: TextStyle(color: AppColors.primaryThemeColor, fontSize: 14.0, fontWeight: FontWeight.bold),)),
                                 ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
                         );
-                      else  Scaffold(
+                      } else {
+                        Scaffold(
                           extendBodyBehindAppBar: true,
                           backgroundColor: AppColors.primaryThemeColor,
                           body: Column(
@@ -140,7 +145,8 @@ class _SplashScreenState extends State<SplashScreen> {
                             ],
                           ),
                         );
-                      return CustomNavigation();
+                      }
+                      return const CustomNavigation();
                   }
 
                 }),
@@ -156,7 +162,7 @@ class _SplashScreenState extends State<SplashScreen> {
   }
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       extendBodyBehindAppBar: true,
       backgroundColor: AppColors.primaryThemeColor,
       // body: Center(

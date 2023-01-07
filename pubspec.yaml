@@ -51,6 +51,7 @@ dependencies:
   font_awesome:
   flutter_flushbar:
   syncfusion_flutter_charts: ^20.4.41
+  flutter_staggered_grid_view: ^0.4.0
 
 dev_dependencies:
   flutter_test:
